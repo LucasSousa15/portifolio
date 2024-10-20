@@ -1,0 +1,43 @@
+@media (max-width: 768px) { /* Para telas menores que 768px */
+    .profileText h1 {
+        font-size: 3rem; /* Ajusta para um tamanho menor */
+    }
+}
+
+@media (max-width: 480px) { /* Para telas menores que 480px */
+    .profileText h1 {
+        font-size: 2.5rem; /* Ajusta ainda mais para um tamanho menor */
+    }
+}
+
+.profileText h2 {
+    margin: 0; /* Remove a margem padrão do título */
+    font-size: 1.5rem; /* Tamanho da fonte padrão */
+}
+
+/* Tamanho de fonte responsivo para h2 */
+@media (max-width: 768px) {
+    .profileText h2 {
+        font-size: 1.25rem; /* Ajusta o tamanho da fonte para h2 */
+    }
+}
+
+.profileText p {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0; 
+    font-size: 1rem; /* Tamanho padrão do texto */
+}
+
+/* Tamanho de fonte responsivo para p */
+@media (max-width: 768px) {
+    .profileText p {
+        font-size: 0.9rem; /* Ajusta o tamanho do texto para p */
+    }
+}
+
+@media (max-width: 480px) {
+    .profileText p {
+        font-size: 0.8rem; /* Ajusta ainda mais o tamanho do texto para p */
+    }
+}

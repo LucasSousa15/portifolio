@@ -3,38 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lucas Sousa|DEV Front-end</title>
-
+    <title>Lucas Sousa | Dev em Formação</title>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/mediaQuerys.css">
 </head>
-<link rel="stylesheet" href="CSS/style.css">
-<link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
-
 <body>
-<header>
-    <h1>Lucas Sousa</h1>
 
-    <h2>Front-end Developper</h2>
+    <header>
+        <nav>
+            <a href="#" data-section="home" class="menu" >Home</a>
+            <a href="#" data-section= "about"class="menu">Sobre</a> 
+            <a href="#" data-section= "projects" class="menu">Projetos</a>
+            <a href="#" data-section= "contact" class="menu">Contato</a>          
+        </nav>
+    </header>
+<div class="container">    
+    <section id="home" class="active">
+
+        <div class="content">
+            <div class="profile">
+                <div class="profilePicContainer">
+                    <img src="assets/img/lucassousa-p.jpg" alt="Foto em tamanho pequeno" title="Imagem em tamanho flexível" class="profilePic">
+                </div>
+                <div class="profileText">
+                    <h1>Oi, eu sou o Lucas</h1>
+                    <h2>Estudande de ADS-e a DEV front-End em inicio de carreira.</h2>
+                    <p>Estou fazendo esta landing page para praticar e apresentar os projetos dos quais já participei. Críticas são bem-vindas, pois estou em processo de aprendizado.
+                    </p>
+                    <br>
+                    <button class="cv"><a href="assets/lucas_dos_anjos_de_sousa.pdf">Download CV</a></button>
+                </div>
+                    </div>
+                
+    </section>
+</div>
+
+<div class="container">
+    <section id="about">
+        <h1 class="title">Sobre Mim</h1>
+
+        <p class="longText">
+            Olá! Eu sou Lucas dos Anjos, desenvolvedor front-end com paixão por tecnologia e inovação. Minha jornada começou com a formação em Jogos Digitais pela FATEC Carapicuíba, o que me proporcionou uma base sólida em lógica de programação e design de interfaces. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e me especializando em DevOps, Docker, e tecnologias como Node.js e desenvolvimento web.
+            Com experiência em TI e um foco no desenvolvimento front-end, estou sempre em busca de novos desafios que me permitam aprimorar minhas habilidades e contribuir com soluções criativas e funcionais. Além disso, sou apaixonado por aprender novas tecnologias e tendências, sempre buscando entregar o melhor em cada projeto.
+            Aqui no meu portfólio, você poderá conhecer um pouco mais sobre o meu trabalho, minhas habilidades e os projetos nos quais venho trabalhando. Fique à vontade para explorar e me chamar para trocarmos ideias!
+        </p>
+        
+
+    </section>
+
+</div>
 
 
-</header>
-<nav>
-    <a href="index.html">Home</a>
-    <a href="eu.html">Quem sou eu ?</a>
-    <a href="projetos.html">Meus projetos</a>
-    <a href="contato.html">Contato</a>
-</nav>
-<main>
-    <h1>Bem vindo !</h1>
-    
-    <p>Aqui você pode saber um pouco mais sobre meu perfil profissional e conhecer os projetos em que já trabalhei. 
-    Utilize o menu acima para navegar através das categorias.
-    </p>
 
-    <div class="hg">&lt; LucasSousa &gt;</div>
+</div>
 
-</main>
 <footer>
-    <p>Desenvolvido por Lucas dos Anjos de Sousa - 2024</p>
+      <p>  &copy; Lucas Sousa - 2024</p></p>  
 </footer>
+
+<script src="assets/javascript/changePages.js"></script>
 </body>
 </html>
