@@ -34,6 +34,8 @@
     .profileText p {
         font-size: 0.9rem; /* Ajusta o tamanho do texto para p */
     }
+
+    
 }
 
 @media (max-width: 480px) {
