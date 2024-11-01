@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lucas Sousa | Dev em Formação</title>
     <link rel="stylesheet" href="assets/css/global.css">
+    <link rel="stylesheet" href="assets/css/profile.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <script src="assets/javascript/projectCard.js" defer></script>
 </head>
 <body>
 
@@ -45,9 +48,10 @@
                 <h1 class="title">Sobre Mim</h1>
                 <br>
                 <p class="longText">
-                    Olá! Eu sou Lucas dos Anjos, desenvolvedor front-end com paixão por tecnologia e inovação. Minha jornada começou com a formação em Jogos Digitais pela FATEC Carapicuíba, o que me proporcionou uma base sólida em lógica de programação e design de interfaces. Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e me especializando em DevOps, Docker, e tecnologias como Node.js e desenvolvimento web.
-                    Com experiência em TI e um foco no desenvolvimento front-end, estou sempre em busca de novos desafios que me permitam aprimorar minhas habilidades e contribuir com soluções criativas e funcionais. Além disso, sou apaixonado por aprender novas tecnologias e tendências, sempre buscando entregar o melhor em cada projeto.
-                    Aqui no meu portfólio, você poderá conhecer um pouco mais sobre o meu trabalho, minhas habilidades e os projetos nos quais venho trabalhando. Fique à vontade para explorar e me chamar para trocarmos ideias!
+                    Olá! Sou Lucas dos Anjos, desenvolvedor front-end com uma paixão pela tecnologia e inovação. Minha trajetória profissional teve início com a formação em Jogos Digitais pela FATEC Carapicuíba, onde adquiri uma base sólida em lógica de programação e design de interfaces e consegui meu primeiro estágio na área de suporte.
+                    Atualmente, estou cursando Análise e Desenvolvimento de Sistemas e me especializando em desenvolvimento front-end. Gosto de explorar novas tecnologias e ferramentas como Docker, Node.js, Git/GitHub, DevOps e metodologias ágeis, sempre com o objetivo de expandir meu conhecimento e trazer mais eficiência para os projetos.
+                    Sigo atuando com suporte ao usuário, mas, neste momento, meu foco é uma transição para o mercado de desenvolvimento front-end. Busco desafios que me permitam aprimorar minhas habilidades e criar novas soluções visuais, aplicando meu conhecimento na prática. Meu portfólio mostra um pouco do meu trabalho, habilidades e projetos recentes. Fique à vontade para explorar e me chamar para trocarmos ideias! Minhas redes sociais estão disponíveis na seção de contato.
+                    
                 </p>
         </div>
     
@@ -56,16 +60,25 @@
     </div>
     </div>
     
-    <div class="container">""
-        <div class="content">
+    <div class="projectsContainer">
+
             <section id="projects">
-            <div class="profile">
-                <h1 class="title">Seção em Construção</h1>
-                <p class="longText">Estou organizando os projetos e em breve eles serão exibidos aqui e também em meu Github.</p>
-            </div>
-    
+                <h1>Projetos</h1>
+
+                <project-card
+                projectName = "Web-page de apresentação"
+                projectDescription = "Uma webpage que me apresenta como desenvolvedor de forma prática, com visual dinâmico e conteúdo responsivo. (Você está navegando nela neste exato momento)."
+                thumb = "assets/img/thumbnails/this.png"
+                ></project-card>    
+
+                <project-card
+                projectName = "Pokedex"
+                projectDescription = "Projeto prático que desenvolvil duranta o Bootcamp da DIO. Neste projeto tive meu primeiro contato com requisições de API's via protocolo HTTP."
+                thumb = "assets/img/thumbnails/Pokedex.png"
+                ></project-card>    
+                
             </section>
-        </div>
+
     </div>
     
     <div class="container">
@@ -74,6 +87,7 @@
             <div class="profile">
                 <h1 class="title">Seção em Construção</h1>
                 <p class="longText">Estou separando os links as minhas midias sociais e em breve elas estarão disponiveis aqui.</p>
+
             </div>
     
             </section>

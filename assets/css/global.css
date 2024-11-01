@@ -15,6 +15,11 @@
     --FonteTextos:"Source Code Pro";
     }
 
+    html::-webkit-scrollbar, body::-webkit-scrollbar {
+        display: none;
+    }
+    
+
     body, html {
         background-image:linear-gradient(to bottom , var(--cor01), var(--cor02), var(--preto));
         background-repeat: no-repeat;
@@ -26,12 +31,21 @@
         display: flex;
         flex-direction: column;
         position: relative;
+        scrollbar-width: none;
     }
 
     *{
         margin:0px;
         padding: 0px;
         box-sizing: border-box;
+    }
+
+    h1 {
+        text-align: center;
+        font-weight: 200;
+        font-size: 3.5rem;
+        font-family: var(--Fontetitulos), sans-serif;
+        color: white;
     }
 
     .home {
@@ -81,70 +95,6 @@
         color: #F229FF;
     }
 
-    .profile {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap:  20px;
-        flex-wrap: wrap;
-    }
-
-    .profilePicContainer {
-        border-radius: 15%; /* Para arredondar a imagem como um círculo */
-        overflow: hidden; /* Garante que a imagem respeite o arredondamento */
-        box-shadow: 7px 8px 11px #000000a6;
-    };
-
-    .profilePic {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .profileText {
-        display: flex;
-        flex-direction: column;
-        flex: 1;
-        color:var(--branco);
-        margin: 5px 0; 
-        align-items: center;
-        font-family: var(--FonteTextos);
-        text-align: justify;
-    }
-    .profileText h1, h2, .title {
-        text-align: center;
-        font-weight: 200;
-        font-size: 3.5rem;
-        margin: 6px; 
-        font-family: var(--Fontetitulos);
-        color: white;
-    }
-    
-    .profileText h2 {
-        font-size: 2rem;
-    }
-    
-    .cv, .cv > a {
-        background-color:var(--cor03);
-        padding: .5rem;
-        border: none;
-        border-radius: 12rem;
-        font-family: var(--Fontetitulos);
-        color: var(--branco);
-        text-decoration: none;
-    }
-
-    .cv > a:hover {
-        color:var(--cor01)
-    }
-
-    .longText {
-        color: var(--branco);
-        font-family: var(--FonteTextos);
-        text-align: justify;
-
-    }
-
     section {
         display: none;
         position: absolute;
@@ -155,20 +105,12 @@
         box-sizing: border-box;
         box-sizing: border-box;
         overflow-y: auto;
-
+    
     }
-
-
+    
+    
     section.active {
         display: block;
-      }
-
-      .pojectsContainer {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-        height: 100%;
-        overflow-x: hidden
       }
 
       footer{
@@ -179,7 +121,7 @@
         text-align: center;
         font-size: .7rem;
         color: var(--branco);
-        font-family: var(--Fontetitulos);
+        font-family: var(--Fontetitulos), sans-serif;
         width: 100%;
         z-index: 100;
       }
