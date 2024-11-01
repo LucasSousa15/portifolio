@@ -48,6 +48,13 @@
         color: white;
     }
 
+    p {
+        text-align: justify;
+        font-family: var(--FonteTextos);
+        color: white;
+
+    }
+
     .home {
         display: flex;
         flex-direction: column;

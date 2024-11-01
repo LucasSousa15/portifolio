@@ -48,12 +48,13 @@ class projectCard extends HTMLElement {
 
 
         .projectCard {
-                width: 90%;                    
+                   
                 max-width: 550px;                          
                 align-items: center;          
                 justify-content: center;      
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 margin-bottom: 3px;
                 background-color: rgba(255, 255, 255, 0.237);
                 border-radius: 15px;
