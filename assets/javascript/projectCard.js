@@ -15,8 +15,11 @@ class projectCard extends HTMLElement {
 
     //Elementos Filhos que estarão dentro da div "pai"
 
-        //H2 que vai receber o nome do projeto
-        const title = document.createElement("h2");
+
+        //A que vai receber o nome do projeto
+        const title = document.createElement("a");
+        title.href = this.getAttribute("linkDoProjeto");
+        title.target = "blank";
         title.setAttribute("class", "projectName");
         title.textContent = (this.getAttribute("projectName") || "Nome do Projeto");
         componentRoot.appendChild(title)
@@ -32,10 +35,32 @@ class projectCard extends HTMLElement {
         thumbNailPic.alt = (this.getAttribute("thumb-alt") || "Foto que ilustra o projeto desenvolvido");
         divThumbContainer.appendChild(thumbNailPic);
 
+        //Div pra conter a descrição do texto e facilitar uma possível reorganização do conteúdo de cada card
+
+        const resumeContainer = document.createElement("div");
+        resumeContainer.setAttribute("class", "resumeContainer");
+        componentRoot.appendChild(resumeContainer)
+
         const projectDescription = document.createElement("p");
         projectDescription.setAttribute("class", "projectResume");
         projectDescription.textContent = (this.getAttribute("projectDescription") || "Uma breve descrição do projeto");
-        componentRoot.appendChild(projectDescription);
+        resumeContainer.appendChild(projectDescription);
+        
+        //Adicionando a lista com as tecnologias.
+        const technologies = this.getAttribute("technologies") ? this.getAttribute ("technologies").split(",") : [];
+        const ul = document.createElement("ul");
+        ul.setAttribute("class", "techList");
+
+        //Laço para gerar os LIs dinamicamente
+        for (let i = 0; i < technologies.length; i++) {
+            const li = document.createElement("li");
+            li.textContent = technologies[i];
+            ul.appendChild(li);
+
+
+        }
+
+        resumeContainer.appendChild(ul);
 
     
 
@@ -48,8 +73,8 @@ class projectCard extends HTMLElement {
 
 
         .projectCard {
-                   
-                max-width: 550px;                          
+                width:100%;
+                max-width:100%;                        
                 align-items: center;          
                 justify-content: center;      
                 display: flex;
@@ -100,8 +125,17 @@ class projectCard extends HTMLElement {
                     font-family:var(--Fontetitulos);
                     font-size: 1.4em;
                     text-align:center;
+                    text-decoration: none;
+                }
+
+                .projectName:hover {
+                    color:var(--cor02)
                 }
                     
+                .resumeContainer {
+                    width:300px;
+                    height:300px;
+                }
 
                 .projectResume {
                     color:var(--branco);
@@ -111,11 +145,32 @@ class projectCard extends HTMLElement {
                     padding:0;
                 }
 
-                        @media (max-width: 600px) {
-                    .projectCard {
-                        height: auto;  
-                        margin-bottom: 15px;     
-                    }
+                @media (max-width: 600px) {
+                .projectCard {
+                    height: auto;  
+                    margin-bottom: 15px;     
+                }
+
+                .techList, {
+                list-style: none;
+                padding: 0;
+                display: none; 
+                position: absolute; 
+                background: white;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                z-index: 10;
+                margin-top: 5px; 
+            }
+
+            .techList li {
+                padding: 5px 10px;
+                transition: background-color 0.3s;
+            }
+
+            .techList li:hover {
+                background-color: #e0e0e0;
+            }
             `
 
 
