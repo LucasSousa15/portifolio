@@ -48,11 +48,23 @@
         color: white;
     }
 
+    h3 {
+        text-align: center;
+        font-family: var(--Fontetitulos);
+        color: var(--branco);
+    }
+
     p {
         text-align: justify;
         font-family: var(--FonteTextos);
         color: white;
 
+    }
+
+    li {
+        color:var(--branco);
+        font-family: var(--FonteTextos);
+        list-style: none;
     }
 
     .home {
@@ -79,6 +91,7 @@
     }
 
     header {
+        background-color: transparent;
         margin-top: 5px;
         text-align:right;
         position: fixed;
@@ -121,6 +134,7 @@
       }
 
       footer{
+        background-color: transparent;
         background-color: #000;
         position: fixed;
         bottom:0;
@@ -134,4 +148,6 @@
       }
       footer > p {
         text-align: center;
+        
+        
       }

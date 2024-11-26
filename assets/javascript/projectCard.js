@@ -151,7 +151,8 @@ class projectCard extends HTMLElement {
                     margin-bottom: 15px;     
                 }
 
-                .techList, {
+                .techList {
+                color:white;
                 list-style: none;
                 padding: 0;
                 display: none; 
@@ -161,6 +162,11 @@ class projectCard extends HTMLElement {
                 border-radius: 4px;
                 z-index: 10;
                 margin-top: 5px; 
+                
+            }
+
+            .techList:hover {
+                display:block;
             }
 
             .techList li {
