@@ -47,9 +47,17 @@ class projectCard extends HTMLElement {
         resumeContainer.appendChild(projectDescription);
         
         //Adicionando a lista com as tecnologias.
+        const techContainer = document.createElement('div');
+        techContainer.setAttribute('class', 'techContainer');
+        componentRoot.appendChild(techContainer);
+
         const technologies = this.getAttribute("technologies") ? this.getAttribute ("technologies").split(",") : [];
         const ul = document.createElement("ul");
+        const listTitle = document.createElement ('h3');
+        listTitle.textContent = ('Tecnologias utilizadas');
+        ul.appendChild(listTitle);        
         ul.setAttribute("class", "techList");
+        
 
         //Laço para gerar os LIs dinamicamente
         for (let i = 0; i < technologies.length; i++) {
@@ -59,8 +67,8 @@ class projectCard extends HTMLElement {
 
 
         }
-
-        resumeContainer.appendChild(ul);
+  
+        techContainer.appendChild(ul);
 
     
 
@@ -83,6 +91,7 @@ class projectCard extends HTMLElement {
                 margin-bottom: 3px;
                 background-color: rgba(255, 255, 255, 0.237);
                 border-radius: 15px;
+                position:relative;
             }
 
             @charset "UTF-8";
@@ -133,8 +142,8 @@ class projectCard extends HTMLElement {
                 }
                     
                 .resumeContainer {
-                    width:300px;
-                    height:300px;
+                    width:fit-content;
+                    height;
                 }
 
                 .projectResume {
@@ -145,38 +154,57 @@ class projectCard extends HTMLElement {
                     padding:0;
                 }
 
+                .techContainer {
+                    position: relative; /* Necessário para o posicionamento absoluto da lista */
+
+                    }
+
+
+                 .techList {
+                    display: none; /* Lista invisível inicialmente */
+                    position: absolute; 
+                    top: 100%; /* Aparece logo abaixo do card */
+                    left: 0;
+                    background: transparent;
+                    color:var(--branco);
+                    font-family:var(--FonteTextos);
+                    list-style: none;
+                    margin: 0;
+                    padding: 0;
+                    border: none;
+                    z-index: 10;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    width: fit-content;
+                }
+                .techList > h3 {
+                    font-family:var(--Fontetitulos)
+                }
+                .projectCard:hover .techList {
+                    display: block; /* Exibe a lista quando o mouse estiver sobre o card */
+                }
+                
+                .techList li {
+                    padding: 5px 10px;
+                    cursor: pointer;
+                    transition: background-color 0.3s ease;
+                }
+
+                .techList li:hover {
+                    color:var(--cor03);
+                    background-color: #e0e0e0;
+                    font-weight: bold
+                }
+
                 @media (max-width: 600px) {
                 .projectCard {
                     height: auto;  
                     margin-bottom: 15px;     
                 }
 
-                .techList {
-                color:white;
-                list-style: none;
-                padding: 0;
-                display: none; 
-                position: absolute; 
-                background: white;
-                border: 1px solid #ddd;
-                border-radius: 4px;
-                z-index: 10;
-                margin-top: 5px; 
+
+
                 
-            }
-
-            .techList:hover {
-                display:block;
-            }
-
-            .techList li {
-                padding: 5px 10px;
-                transition: background-color 0.3s;
-            }
-
-            .techList li:hover {
-                background-color: #e0e0e0;
-            }
+               
             `
 
 
