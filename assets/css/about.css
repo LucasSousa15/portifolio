@@ -135,5 +135,22 @@
         font-size: 1.3rem;
     }
 }
+.softSkills ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
 
+.softSkills ul li {
+    justify-content: center;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
 
+.softSkills ul li i {
+    color: #ff69b4; /* Cor do ícone */
+    margin-right: 10px;
+    font-size: 18px;
+}
