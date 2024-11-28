@@ -162,7 +162,7 @@ class projectCard extends HTMLElement {
 
                  .techList {
                     display: none; /* Lista invisível inicialmente */
-                    position: absolute; 
+                    position: relative; 
                     top: 100%; /* Aparece logo abaixo do card */
                     left: 0;
                     background: transparent;
