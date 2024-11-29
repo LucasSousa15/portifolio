@@ -67,6 +67,16 @@ class projectCard extends HTMLElement {
 
 
         }
+
+        document.addEventListener("click", (event) => {
+            const allTechLists = document.querySelectorAll(".techList");
+            allTechLists.forEach(techList => {
+                if (!techList.closest(".projectCard")?.contains(event.target)) {
+                    techList.classList.remove("visible");
+                }
+            });
+        });
+        
   
         techContainer.appendChild(ul);
 
@@ -122,12 +132,22 @@ class projectCard extends HTMLElement {
                     overflow: hidden
                 }
 
+                .thumbContainer .thumbnail {
+                    filter: grayscale(100%);
+                    transition: filter 0.5s ease;
+                }
+
                 .thumbnail {
                         width: 100%;
                         height: 100%;
                         object-fit:cover ;
                         border: none;
                 }
+
+                .thumbContainer:hover .thumbnail,
+                .thumbContainer:active .thumbnail {
+                    filter: grayscale(0%);
+                } 
 
                 .projectName {
                     color: var(--branco);
