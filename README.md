@@ -10,7 +10,7 @@ O projeto ainda está em construção.
 - [x] Criação da Seção: "Home"
 - [x] Implementação do Efeito "Hide and show"
 - [x] Criação da Seção: "Sobre"
-- [ ] Criação de Componentes para a seção de Projetos
+- [x] Criação de Componentes para a seção de Projetos
 - [ ] Implementação da Seção "Contato"
 
 ## Técnologias utilizadas 
