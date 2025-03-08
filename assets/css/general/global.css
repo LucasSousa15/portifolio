@@ -80,7 +80,6 @@
         flex-direction: column;
         padding-top:0;
         padding: 20px;
-
     }
     
     .content {
@@ -88,6 +87,9 @@
         flex: 1;
         padding: 20px;
         flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
     }
 
     header {
