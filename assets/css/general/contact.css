@@ -89,19 +89,19 @@ span {
 }
 
 .whatsapp {
-    mask-image: url('/assets/img/icons/socialmedia/whatsapp.svg');
+    mask-image: url('./assets/img/icons/socialmedia/whatsapp.svg');
 }
 
 .instagram {
-    mask-image: url('/assets/img/icons/socialmedia/instagram.svg');
+    mask-image: url('./assets/img/icons/socialmedia/instagram.svg');
 }
 
 .linkedin {
-    mask-image: url('/assets/img/icons/socialmedia/linkedin.svg');
+    mask-image: url('./assets/img/icons/socialmedia/linkedin.svg');
 }
 
 .github {
-    mask-image: url('/assets/img/icons/socialmedia/github.svg');
+    mask-image: url('./assets/img/icons/socialmedia/github.svg');
 }
 
 section.active {
