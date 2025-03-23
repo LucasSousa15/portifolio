@@ -70,9 +70,13 @@ span {
 .iconsGrid ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
     justify-content: center;
     align-items: center;
+}
+
+.iconsGrid ul li {
+    margin: 3px;
+
 }
 
 .icon {
@@ -89,19 +93,19 @@ span {
 }
 
 .whatsapp {
-    mask-image: url('./assets/img/icons/socialmedia/whatsapp.svg');
+    mask-image: url('https://simpleicons.org/icons/whatsapp.svg');
 }
 
 .instagram {
-    mask-image: url('./assets/img/icons/socialmedia/instagram.svg');
+    mask-image: url('https://simpleicons.org/icons/instagram.svg');
 }
 
 .linkedin {
-    mask-image: url('./assets/img/icons/socialmedia/linkedin.svg');
+    mask-image: url('https://raw.githubusercontent.com/LucasSousa15/portifolio/beb2580270bf13d867ae5aa1f5791ee7e8cf1fdb/assets/img/icons/socialmedia/linkedin.svg');
 }
 
 .github {
-    mask-image: url('./assets/img/icons/socialmedia/github.svg');
+    mask-image: url('https://simpleicons.org/icons/github.svg');
 }
 
 section.active {
