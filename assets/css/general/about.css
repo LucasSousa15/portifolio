@@ -115,7 +115,7 @@
     justify-content: center;
     width: 60px;
     height: 60px;
-    background-color: var(--cor02); /* Usando a cor do fundo */
+    background-color: var(--cor02);
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }

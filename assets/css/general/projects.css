@@ -5,6 +5,7 @@
     height: calc(100vh - 100px);
     padding-bottom: 60px;
     width: 100%;
+
 }
 
 .cardsContainer {
@@ -17,12 +18,12 @@
 
 @media (min-width: 1024px) {
     .cardsContainer {
-        grid-template-columns: repeat(3, 1fr); /* Exibe 3 colunas em telas médias */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
 
 @media (min-width: 1440px) {
     .cardsContainer {
-        grid-template-columns: repeat(4, 1fr); /* Exibe 4 colunas em telas grandes */
+        grid-template-columns: repeat(4, 1fr); 
     }
 }

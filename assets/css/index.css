@@ -1,6 +1,6 @@
 @import url(./general/about.css);
-@import url(./general/global.css);
 @import url(./general/mediaQuerys.css);
-@import url(./general/socialMedia.css);
 @import url(./general/projects.css);
 @import url(general/profile.css);
+@import url(general/contact.css);
+@import url(./general/global.css);

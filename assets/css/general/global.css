@@ -40,10 +40,20 @@
         box-sizing: border-box;
     }
 
+
+
     h1 {
         text-align: center;
         font-weight: 200;
-        font-size: 3.5rem;
+        font-size: 2.5rem;
+        font-family: var(--Fontetitulos), sans-serif;
+        color: white;
+    }
+
+    h2 {
+        text-align: center;
+        font-weight: 200;
+        font-size: 1.5rem;
         font-family: var(--Fontetitulos), sans-serif;
         color: white;
     }
@@ -51,6 +61,12 @@
     h3 {
         text-align: center;
         font-family: var(--Fontetitulos);
+        color: var(--branco);
+    }
+
+    span {
+        font-family:  var(--Fontetitulos);
+        font-size: 1rem;
         color: var(--branco);
     }
 
@@ -78,6 +94,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
+        margin: 0rem 1.5rem
     }
     
     .content {
@@ -116,7 +133,8 @@
     }
 
     section {
-        display: none;
+        opacity: 0;
+        transform: translateY(10px);
         position: absolute;
         left:0;
         width: 100%;
@@ -130,6 +148,8 @@
     
     
     section.active {
+        opacity: 1;
+        transform: translateY(0);
         display: flex;
         align-items: center;
         justify-content: center;

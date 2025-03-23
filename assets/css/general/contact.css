@@ -1,0 +1,109 @@
+
+section {
+    display: none; 
+    text-align: center; 
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+
+.contactCard {
+    max-width: 500px;
+    width: 100%; 
+    padding: 20px;
+    background-color: var(--cor01);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+
+.contactCard input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.contactCard input:focus {
+    border-color: var(--cor01); 
+}
+
+.contactCard input#message {
+    height: 50%;
+}
+
+.contactCard #sendEmailButton {
+    padding: 12px 20px;
+    background-color: var(--branco); 
+    color: var(--cor02); 
+    font-family: var(--FonteTextos);
+    font-size: larger;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contactCard #sendEmailButton:hover {
+    color: var(--branco);
+    background-color: var(--cor02);
+}
+
+span {
+    color: inherit;
+    font-family: inherit;
+}
+
+.socialMedia {
+    text-align: center;
+}
+
+.iconsGrid ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 64px;
+    height: 64px;
+    background-color: var(--branco);
+    display: inline-block;
+    mask-size: cover;
+    transition: background-color 0.3s ease;
+}
+
+.icon:hover {
+    background-color: var(--cor03);
+}
+
+.whatsapp {
+    mask-image: url('/assets/img/icons/socialmedia/whatsapp.svg');
+}
+
+.instagram {
+    mask-image: url('/assets/img/icons/socialmedia/instagram.svg');
+}
+
+.linkedin {
+    mask-image: url('/assets/img/icons/socialmedia/linkedin.svg');
+}
+
+.github {
+    mask-image: url('/assets/img/icons/socialmedia/github.svg');
+}
+
+section.active {
+    display: flex; 
+}
