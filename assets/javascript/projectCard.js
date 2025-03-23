@@ -1,7 +1,7 @@
 class projectCard extends HTMLElement {
     constructor() {
         super();
-            //construção do objeto
+            
             const shadow = this.attachShadow({mode:"open"});
             shadow.appendChild(this.build());
             shadow.appendChild(this.style());
@@ -9,14 +9,14 @@ class projectCard extends HTMLElement {
     }
 
     build () {
-    //Elemento Principal ("pai")
+    
         const componentRoot = document.createElement("div");
         componentRoot.setAttribute("class", "projectCard");
 
-    //Elementos Filhos que estarão dentro da div "pai"
+    
 
 
-        //A que vai receber o nome do projeto
+        
         const title = document.createElement("a");
         title.href = this.getAttribute("linkDoProjeto");
         title.target = "blank";
@@ -24,7 +24,7 @@ class projectCard extends HTMLElement {
         title.textContent = (this.getAttribute("projectName") || "Nome do Projeto");
         componentRoot.appendChild(title)
         
-        //div pra ser o container da Thumbnail do projeto
+        
         const divThumbContainer = document.createElement ("div");
         divThumbContainer.setAttribute("class", "thumbContainer");
         componentRoot.appendChild(divThumbContainer);
@@ -35,7 +35,7 @@ class projectCard extends HTMLElement {
         thumbNailPic.alt = (this.getAttribute("thumb-alt") || "Foto que ilustra o projeto desenvolvido");
         divThumbContainer.appendChild(thumbNailPic);
 
-        //Div pra conter a descrição do texto e facilitar uma possível reorganização do conteúdo de cada card
+        
 
         const resumeContainer = document.createElement("div");
         resumeContainer.setAttribute("class", "resumeContainer");
@@ -46,7 +46,7 @@ class projectCard extends HTMLElement {
         projectDescription.textContent = (this.getAttribute("projectDescription") || "Uma breve descrição do projeto");
         resumeContainer.appendChild(projectDescription);
         
-        //Adicionando a lista com as tecnologias.
+        
         const techContainer = document.createElement('div');
         techContainer.setAttribute('class', 'techContainer');
         componentRoot.appendChild(techContainer);
@@ -59,7 +59,7 @@ class projectCard extends HTMLElement {
         ul.setAttribute("class", "techList");
         
 
-        //Laço para gerar os LIs dinamicamente
+        
         for (let i = 0; i < technologies.length; i++) {
             const li = document.createElement("li");
             li.textContent = technologies[i];
@@ -175,15 +175,15 @@ class projectCard extends HTMLElement {
                 }
 
                 .techContainer {
-                    position: relative; /* Necessário para o posicionamento absoluto da lista */
+                    position: relative; 
 
                     }
 
 
                  .techList {
-                    display: none; /* Lista invisível inicialmente */
+                    display: none; 
                     position: relative; 
-                    top: 100%; /* Aparece logo abaixo do card */
+                    top: 100%; 
                     left: 0;
                     background: transparent;
                     color:var(--branco);
@@ -200,7 +200,7 @@ class projectCard extends HTMLElement {
                     font-family:var(--Fontetitulos)
                 }
                 .projectCard:hover .techList {
-                    display: block; /* Exibe a lista quando o mouse estiver sobre o card */
+                    display: block; 
                 }
                 
                 .techList li {
